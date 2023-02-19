@@ -1,0 +1,38 @@
+.TH SHELLWEB 8  "December 10, 2022" "version 1.0" "MANUAL PAGE"
+.SH NAME
+Shellweb \- minimalistic HTTP server.
+.SH SYNOPSIS
+.B shellweb
+[\-v] [\-a authfile] [\-d rootdir] [\-p port] [\-r proxy_spec]
+.SH DESCRIPTION
+\fBSHELLWEB\fR is a minimalistic HTTP server,
+that's slowly developed during educational process in
+Russian Technological University MIREA as a part of Operating systems course.
+.SH OPTIONS
+.TP
+\-v
+Verbose mode.
+.TP
+\-a
+Uses file for authorization in format "username:password".
+Must be placed to Shellweb root directory.
+.TP
+\-d
+Changes root directory. /var/www - default directory.
+.TP
+\-p
+Changes port. Default is 13000 plus numeric ID value of current user.
+.TP
+\-r
+Enable reverse proxy mode. Enter proxy adress here.
+.SH "FILES"
+template.html - template for generating directory content.
+.TP
+err403.html - template for generating error 403.
+.TP
+err404.html - template for generating error 404.
+.SH "BUGS"
+During the tests, no problems were found.
+.SH AUTHOR
+Vadim Zhukov <@grayed>.
+
